@@ -5,6 +5,8 @@ import compress from "compression";
 import cors from "cors";
 import helmet from "helmet";
 
+import Template from '../template'
+
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -14,5 +16,9 @@ app.use(compress())
 app.use(helmet())
 // enable CORS - Cross Origin Resource Sharing
 app.use(cors())
+
+app.get('/', (req,res) => {
+    res.status(200).send(Template())
+})
 
 export default app
