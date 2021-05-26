@@ -2,7 +2,7 @@
   "name": "mern_skeletonv1",
   "version": "1.0.0",
   "description": "From Full Stack React Projs Book",
-  "main": "express.js",
+  "main": "./dist/server.generated.js",
   "scripts": {
     "development": "nodemon"
   },
